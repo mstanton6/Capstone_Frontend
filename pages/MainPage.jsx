@@ -33,6 +33,8 @@ export default function Main() {
         <div>
             <h1>Movie Watchlist</h1>
             <Link to="/AddPage">Add Movie</Link>
+            <br></br>
+            <br></br>
             <table>
                 <thead>
                     <tr>
