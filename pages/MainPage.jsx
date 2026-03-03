@@ -8,22 +8,32 @@ export default function Main() {
 
         try {
             let response = await fetch(url);
-            const data = response.json();
-            console.log(data);
+            const movie = response.json();
+            console.log(movie);
         } catch (err) {
             console.error(err);
         }
     }
-    
+
     // This will run on the first render but not on subsquent renders
     useEffect(() => {
-      getMovies();
+        getMovies();
     }, []);
 
     return (
         <div>
             <h1>Movie Watchlist</h1>
-            {/* <Table> </Table> */}
+            <table>
+                <thead>
+                    <tr>
+                      <th>title</th>
+                      <th>genre</th>
+                      <th>year</th>
+                      <th>rating</th>
+                      <th>watched</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     );
 }
