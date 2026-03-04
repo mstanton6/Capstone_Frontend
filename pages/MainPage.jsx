@@ -54,7 +54,7 @@ export default function Main() {
                    <td>{movie.genre}</td>
                    <td>{movie.year}</td>
                    <td>{movie.rating}</td>
-                   <td>{movie.watched}</td>
+                   <td>{movie.watched ? "Yes" : "No"}</td>
                    <td> <Link to="/EditPage" state={{ movie }}>Edit Movie</Link></td>
                    <td><button onClick={() => deleteMovie(movie._id)}>Delete Movie</button></td>
                  </tr>

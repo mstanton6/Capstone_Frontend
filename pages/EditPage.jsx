@@ -16,13 +16,14 @@ export default function editPage() {
   const {movie} = location.state || {} 
 
   useEffect(() => {
-    setformData(movie);
+    if (movie) setformData(movie);
   }, []);
 
   // console.log('Movie title to edit is: ' + movie.title)
 
     function handleChange(e) {
       if (e.target.type == 'checkbox'){
+        console.log("Checkbox changed:", e.target.checked);
         setformData ({...formData, watched: e.target.checked})
       }
       else(
@@ -34,6 +35,7 @@ export default function editPage() {
     async function handleSubmit(e) {
        
         e.preventDefault();
+        console.log("Submitting formData:", formData);
         const url = `http://localhost:3001/api/movies/${movie._id}`;
 
         let editData = { ...formData }
