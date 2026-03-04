@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function addPage() {
 
-    const[pageData, Setpagedata] = useState({})
+    const[formData, setpFormData] = useState({})
 
     function handleChange(e) {
     }
@@ -19,24 +19,24 @@ export default function addPage() {
         <form onSubmit={handleSubmit}>
           <label>
             Title:
-            <input type="text"  name="title"  placeholder="Title..."    onChange={handleChange} value={pageData.title} required/>
+            <input type="text"    name="title"  placeholder="Title..."    onChange={handleChange} value={formData.title} required/>
             <br></br><br></br>
             Genre:
-            <input type="text"  name="genre"  placeholder="Genre..."    onChange={handleChange} value={pageData.genre} />
+            <input type="text"     name="genre"  placeholder="Genre..."    onChange={handleChange} value={formData.genre} />
             <br></br><br></br>
             Year:
-            <input type="text"  name="year"    placeholder="Year..."    onChange={handleChange} value={pageData.year} />
+            <input type="number"     name="year"    placeholder="Year..."    onChange={handleChange} value={formData.year} />
             <br></br><br></br>
             Rating:
-            <input type="text"  name="rating"  placeholder="Rating..."  onChange={handleChange} value={pageData.rating} />
+            <input type="text"     name="rating"  placeholder="Rating..."  onChange={handleChange} value={formData.rating} />
             <br></br><br></br>
             Watched:
-            <input type="checkbox"  name="watched" placeholder="Watched..." onChange={handleChange} value={pageData.watched} />            
+            <input type="checkbox"  name="watched" placeholder="Watched..." onChange={handleChange} checked={formData.watched} />            
           </label>
-
+          
         </form>
-      </fieldset>    
-
+        <Link to="/">Back to Main</Link>
+      </fieldset> 
     </div>
   );
 }
