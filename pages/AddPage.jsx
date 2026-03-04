@@ -10,7 +10,6 @@ export default function addPage() {
         year: "",
         rating: "",
         watched: false,
-
     });
 
     function handleChange(e) {
