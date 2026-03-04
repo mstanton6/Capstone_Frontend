@@ -65,6 +65,7 @@ export default function addPage() {
             Watched:
             <input type="checkbox"  name="watched" placeholder="Watched..." onChange={handleChange} checked={formData.watched} />            
           </label>
+            <br></br>
             <button type = "submit">Submit</button>
         </form>
         <Link to="/">Back to Main</Link>
