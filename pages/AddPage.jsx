@@ -1,14 +1,46 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 export default function addPage() {
 
-    const[formData, setpFormData] = useState({})
+    const[formData, setformData] = useState({
+        title: "",
+        genre: "",
+        year: "",
+        rating: "",
+        watched: false,
+
+    });
 
     function handleChange(e) {
+      if (e.target.type == 'checkbox'){
+        setformData ({...formData, watched: e.target.checked})
+      }
+      else(
+        setformData ({...formData, [e.target.name]: e.target.value})
+      )
+        
     }
 
     async function handleSubmit(e) {
+       
+        e.preventDefault();
+        const url = "http://localhost:3001/api/movies"
+
+        let addData = { ...formData }
+
+        try {
+            let response = await axios.post(url, addData);
+            const movies = response.data;
+            setformData ({ title: "",
+                           genre: "",
+                           year: "",
+                          rating: "",
+                          watched: false,})
+        } catch (err) {
+          console.error(err);
+        } 
     }
 
   return (
@@ -33,7 +65,7 @@ export default function addPage() {
             Watched:
             <input type="checkbox"  name="watched" placeholder="Watched..." onChange={handleChange} checked={formData.watched} />            
           </label>
-          
+            <button type = "submit">Submit</button>
         </form>
         <Link to="/">Back to Main</Link>
       </fieldset> 
