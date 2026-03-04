@@ -1,5 +1,6 @@
 import { Link , useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react'
+import axios from "axios";
 
 export default function editPage() {
 
@@ -33,12 +34,12 @@ export default function editPage() {
     async function handleSubmit(e) {
        
         e.preventDefault();
-        const url = "http://localhost:3001/api/movies"
+        const url = `http://localhost:3001/api/movies/${movie._id}`;
 
-        let addData = { ...formData }
+        let editData = { ...formData }
 
         try {
-            let response = await axios.patch(url, addData);
+            let response = await axios.patch(url, editData);
             const movies = response.data;
             setformData ({ title: "",
                            genre: "",
