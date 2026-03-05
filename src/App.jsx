@@ -5,6 +5,7 @@ import './index.css';
 import MainPage from "../pages/MainPage.jsx"
 import AddPage from "../pages/AddPage.jsx";
 import EditPage from "../pages/EditPage.jsx";
+import AboutPage from "../pages/AboutPage.jsx";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/AddPage" element={<AddPage />} />
         <Route path="/EditPage" element={<EditPage />} />
+        <Route path="/AboutPage" element={<AboutPage />} />
       </Routes>
     </div>
 

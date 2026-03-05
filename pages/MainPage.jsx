@@ -38,7 +38,10 @@ export default function Main() {
     return (
         <div>
             <h1>Movie Watchlist</h1>
-            <Link to="/AddPage">Add Movie</Link>
+            <div className="mainheader">
+              <Link to="/AddPage">Add Movie</Link>
+              <Link to="/AboutPage">About</Link>
+           </div>
             <br></br>
             <br></br>
             <table>
