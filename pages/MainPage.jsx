@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 export default function Main() {
 
     const[movies, setMovies] = useState([])
 
     async function getMovies() {
-        // fetch all the movies
         const url = "http://localhost:3001/api/movies"
-
+        // fetch all the movies
         try {
             let response = await fetch(url);
             const movies = await response.json();
@@ -18,10 +18,16 @@ export default function Main() {
         }
     }
 
-    function deleteMovie () {
-        <h1>This is the delete Page</h1>
-        console.log('Got to Delete');
-        // Placeholder for now
+    async function deleteMovie (id, title) {
+
+        await axios.delete(`http://localhost:3001/api/movies/${id}`);
+
+        alert("The movie, " + title + " ,was Successfully Deleted")
+
+        setMovies(m => {
+             return m.filter((movie) => movie._id !== id)
+               })
+
     }
 
     // This will run on the first render but not on subsquent renders
@@ -56,7 +62,7 @@ export default function Main() {
                    <td>{movie.rating}</td>
                    <td>{movie.watched ? "Yes" : "No"}</td>
                    <td> <Link to="/EditPage" state={{ movie }}>Edit Movie</Link></td>
-                   <td><button onClick={() => deleteMovie(movie._id)}>Delete Movie</button></td>
+                   <td><button onClick={() => deleteMovie(movie._id, movie.title)}>Delete Movie</button></td>
                  </tr>
                 )
                 )}
