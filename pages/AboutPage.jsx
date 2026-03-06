@@ -6,6 +6,7 @@ import matrix from "../src/assets/images/matrix.jpg"
 
 export default function AboutPage() {
 
+    // Display About Page, and under it, a description of the application and then some images of movies.
     return (
         <div className="displayimage">
             <h1>About Page</h1>

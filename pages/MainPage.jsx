@@ -4,6 +4,7 @@ import axios from "axios";
 
 export default function Main() {
 
+    // Get all the movies ordered by watched,then name. Set state when done.
     const[movies, setMovies] = useState([])
 
     async function getMovies() {
@@ -18,6 +19,7 @@ export default function Main() {
         }
     }
 
+    // Delete a movie by id. title is passed in to show to the user.
     async function deleteMovie (id, title) {
 
         await axios.delete(`http://localhost:3001/api/movies/${id}`);
@@ -37,6 +39,7 @@ export default function Main() {
 
     return (
         <div>
+            {/* Display all the movies in an HTML table format */}
             <h1>Movie Watchlist</h1>
             <div className="mainheader">
               <Link to="/AddPage">Add Movie</Link>

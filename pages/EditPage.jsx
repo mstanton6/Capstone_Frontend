@@ -19,8 +19,8 @@ export default function editPage() {
     if (movie) setformData(movie);
   }, []);
 
-  // console.log('Movie title to edit is: ' + movie.title)
 
+    // take care of the changes in the form
     function handleChange(e) {
       if (e.target.type == 'checkbox'){
         console.log("Checkbox changed:", e.target.checked);
@@ -32,8 +32,8 @@ export default function editPage() {
         
     }
 
+    // take care of submits in the form
     async function handleSubmit(e) {
-       
         e.preventDefault();
         console.log("Submitting formData:", formData);
         const url = `http://localhost:3001/api/movies/${movie._id}`;
@@ -54,6 +54,7 @@ export default function editPage() {
     }
 
   return (
+// a form for editing movies
 <div className="addform">
       <fieldset style={{ textAlign: "center" }}>
         <legend>Edit a New Movie</legend>

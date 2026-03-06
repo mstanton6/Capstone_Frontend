@@ -12,6 +12,7 @@ export default function addPage() {
         watched: false,
     });
 
+    // take care of the changes in the form
     function handleChange(e) {
       if (e.target.type == 'checkbox'){
         setformData ({...formData, watched: e.target.checked})
@@ -22,6 +23,7 @@ export default function addPage() {
         
     }
 
+    // take care of submits in the form
     async function handleSubmit(e) {
        
         e.preventDefault();
@@ -43,7 +45,7 @@ export default function addPage() {
     }
 
   return (
-
+    // a form for adding movies
     <div className="addform">
       <fieldset style={{ textAlign: "center" }}>
         <legend>Add a New Movie</legend>
