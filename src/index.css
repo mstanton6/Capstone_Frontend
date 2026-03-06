@@ -70,11 +70,28 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;     
-  height: 100vh;           
-  width: 100%;            
 }
 .mainheader {
   display: flex;
   justify-content: center;
+  gap: 25px;
+  font-size: 30px;
+}
+.displayimage {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+}
+.images img {
+  width: 375px;
+}
+.images {
+  display: flex;
+  gap: 20px;
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+.mainimages img {
+  width: 150px;
 }

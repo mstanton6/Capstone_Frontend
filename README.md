@@ -1,16 +1,67 @@
-# React + Vite
+# My Application Name and description
+Name: Movie Watchlist 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description: This site is dedicated to movies and movie lovers. It helps you keep track of the films you’ve already watched and the ones you want to watch in the future. From the main page, you can easily add new movies, edit existing movies, or remove movies from your list. The goal of this site is to provide a simple and convenient way to organize your personal movie collection and watchlist.
 
-Currently, two official plugins are available:
+ Linking my backend and frontend repositories here:
+ https://github.com/mstanton6/Capstone_Frontend.git - this project
+ https://github.com/mstanton6/Capstone_Backend.git  - reference to my backend project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+How to Start
+============
+You start the server by "npm run dev"
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Example usage
+1. This is how to use the movie watchlist
 
-## Expanding the ESLint configuration
+View Movies     - View(Get) all movies from the database on the Main Page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Add Movie       - Add a movie to the list
+(top of Main page)
+
+Edit Moive      - Edit the moive on the same row as the link "Edit Movie"
+
+Delete Movie    - Delete the moive on the same row as the button "Delete Movie"
+
+
+# Technologies Used:
+
+JavaScript              – The language that was used to build this project.
+
+React                   - React is a component-based JavaScript library used
+                           to build dynamic and interactive user interfaces.
+
+# link to my gitGitHub account: https://github.com/mstanton6/Capstone_Frontend.git
+
+
+# Installation and Usage
+
+To use this project locally:
+
+1.  **Clone the repository:**
+
+    git clone https://github.com/mstanton6/Capstone_Frontend.git
+    
+2.  **Navigate to the project directory:**
+
+    cd Capstone_Frontend
+    
+3.  ** Run dependencies 
+
+    npm install react-router-dom
+
+    npm install axios
+
+4. Run "npm run dev"
+
+5.  Open a browser or Postman and go to http://localhost:5173/
+
+# Contributions
+- Thank you to the following for making contributions to my project       
+1. https://www.google.com/
+
+2. https://stackoverflow.com/questions
+
+3. https://www.w3schools.com/
+

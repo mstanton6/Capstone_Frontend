@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import backfuture from "../src/assets/images/backtothefuture.jpg"
+import shawshank from "../src/assets/images/shawshank.jpg"
+import privateryan from "../src/assets/images/savingprivateryan.jpg"
+import matrix from "../src/assets/images/matrix.jpg"
 
 export default function Main() {
 
@@ -39,11 +43,14 @@ export default function Main() {
 
     return (
         <div>
-            {/* Display all the movies in an HTML table format */}
             <h1>Movie Watchlist</h1>
-            <div className="mainheader">
+            <div className="mainheader mainimages" >
+              <img src={backfuture} alt="Back to the Future"/>
+              <img src={shawshank} alt="Shawshank Redemption"/>
               <Link to="/AddPage">Add Movie</Link>
               <Link to="/AboutPage">About</Link>
+              <img src={privateryan} alt="Saving Private Ryan"/>
+              <img src={matrix} alt="The Matrix"/>
            </div>
             <br></br>
             <br></br>
