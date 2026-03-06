@@ -54,7 +54,7 @@ export default function Main() {
            </div>
             <br></br>
             <br></br>
-            <table>
+            <table className="mytable">
                 <thead>
                     <tr>
                       <th>Title</th>

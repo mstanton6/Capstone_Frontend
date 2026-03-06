@@ -95,3 +95,7 @@ tr:nth-child(even) {
 .mainimages img {
   width: 150px;
 }
+.mytable {
+  width: 100%;
+  table-layout: fixed;
+}
