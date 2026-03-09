@@ -25,14 +25,17 @@ export default function Main() {
 
     // Delete a movie by id. title is passed in to show to the user.
     async function deleteMovie (id, title) {
+        try {
+          await axios.delete(`http://localhost:3001/api/movies/${id}`);
 
-        await axios.delete(`http://localhost:3001/api/movies/${id}`);
+          alert("The movie, " + title + " ,was Successfully Deleted")
 
-        alert("The movie, " + title + " ,was Successfully Deleted")
-
-        setMovies(m => {
+          setMovies(m => {
              return m.filter((movie) => movie._id !== id)
                })
+        } catch (err) {
+            console.error(err);
+        }
 
     }
 

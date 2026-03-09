@@ -69,7 +69,8 @@ button:focus-visible {
 .addform {
   display: flex;
   justify-content: center;
-  align-items: center;     
+  align-items: center;
+  width: 600px; 
 }
 .mainheader {
   display: flex;

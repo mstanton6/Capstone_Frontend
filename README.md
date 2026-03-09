@@ -32,6 +32,14 @@ JavaScript              – The language that was used to build this project.
 React                   - React is a component-based JavaScript library used
                            to build dynamic and interactive user interfaces.
 
+React Router            - react-router-dom
+
+Axios
+
+HTML
+
+CSS classes                            
+
 # link to my gitGitHub account: https://github.com/mstanton6/Capstone_Frontend.git
 
 

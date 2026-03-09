@@ -57,7 +57,7 @@ export default function editPage() {
 // a form for editing movies
 <div className="addform">
       <fieldset style={{ textAlign: "center" }}>
-        <legend>Edit a New Movie</legend>
+        <legend>Edit a Movie</legend>
         <form onSubmit={handleSubmit}>
           <label>
             Title:
