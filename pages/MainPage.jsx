@@ -12,7 +12,7 @@ export default function Main() {
     const[movies, setMovies] = useState([])
 
     async function getMovies() {
-        const url = "http://localhost:3001/api/movies"
+        const url = "https://capstone-backend-cyd2.onrender.com/api/movies"
         // fetch all the movies
         try {
             let response = await fetch(url);
@@ -26,7 +26,7 @@ export default function Main() {
     // Delete a movie by id. title is passed in to show to the user.
     async function deleteMovie (id, title) {
         try {
-          await axios.delete(`http://localhost:3001/api/movies/${id}`);
+          await axios.delete(`https://capstone-backend-cyd2.onrender.com/api/movies/${id}`);
 
           alert("The movie, " + title + " ,was Successfully Deleted")
 

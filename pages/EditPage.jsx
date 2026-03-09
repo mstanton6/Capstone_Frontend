@@ -36,7 +36,7 @@ export default function editPage() {
     async function handleSubmit(e) {
         e.preventDefault();
         console.log("Submitting formData:", formData);
-        const url = `http://localhost:3001/api/movies/${movie._id}`;
+        const url = `https://capstone-backend-cyd2.onrender.com/api/movies/${movie._id}`;
 
         let editData = { ...formData }
 

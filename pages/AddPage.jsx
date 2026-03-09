@@ -27,7 +27,7 @@ export default function addPage() {
     async function handleSubmit(e) {
        
         e.preventDefault();
-        const url = "http://localhost:3001/api/movies"
+        const url = "https://capstone-backend-cyd2.onrender.com/api/movies"
 
         let addData = { ...formData }
 
